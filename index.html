@@ -10,6 +10,7 @@
 
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
   <style>
     /* Parallax Effect */
@@ -32,7 +33,21 @@
 </head>
 
 <body>
+  <!-- Opening Screen -->
+  <div id="opening-screen">
 
+    <!-- Background Glow -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-10 left-10 w-72 h-72 bg-white opacity-10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-10 right-10 w-72 h-72 bg-gray-400 opacity-10 rounded-full blur-3xl animate-pulse"></div>
+    </div>
+
+    <!-- Text -->
+    <h1 id="hello-text">
+      Hello
+    </h1>
+
+  </div>
   <!-- Header -->
   <header class="fixed top-0 left-0 z-50 flex w-full items-center bg-white dark:bg-dark shadow-md">
 
@@ -64,7 +79,10 @@
                 <a href="#about" class="mx-8 flex py-2 text-base text-dark dark:text-white group-hover:text-primary">Tentang Saya</a>
               </li>
               <li class="group">
-                <a href="#portfolio" class="mx-8 flex py-2 text-base text-dark dark:text-white group-hover:text-primary">Portfolio</a>
+                <a href="#pendidikan" class="mx-8 flex py-2 text-base text-dark dark:text-white group-hover:text-primary">Pendidikan</a>
+              </li>
+              <li class="group">
+                <a href="#projek" class="mx-8 flex py-2 text-base text-dark dark:text-white group-hover:text-primary">Projek</a>
               </li>
               <li class="group">
                 <a href="#pelatihan" class="mx-8 flex py-2 text-base text-dark dark:text-white group-hover:text-primary">Pelatihan & Sertifikasi</a>
@@ -113,6 +131,13 @@
             style="background-color:#BC8F8F;">
             Hubungi Saya
           </a>
+          <a data-aos="fade-up" data-aos-delay="350" position="center"
+            href="#" 
+            onclick="downloadPortfolio()"
+            class="mt-4 inline-block rounded-full py-3 px-8 text-base font-semibold text-white hover:opacity-80 hover:shadow-lg transition"
+            style="background-color:#BC8F8F;">
+            Download Resume
+          </a>
         </div>
 
         <div class="w-full px-4 lg:w-1/2 self-end">
@@ -130,7 +155,6 @@
             </span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -142,7 +166,7 @@
       <div class="flex flex-wrap">
 
         <div class="mb-10 w-full px-4 lg:w-1/2" data-aos="fade-right">
-          <h4 class="mb-3 text-lg font-bold uppercase text-primary">Tentang Saya</h4>
+          <h4 class="mb-3 text-lg font-bold uppercase text-primary" style="color: #BC8F8F;">Tentang Saya</h4>
 
          <p class="leading-relaxed text-dark dark:text-white">
           Saya adalah lulusan <span class="font-bold">Sistem Informasi UPN “Veteran” Jawa Timur</span> 
@@ -198,24 +222,88 @@
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
+  <!-- Pendidikan Section -->
+  <section id="pendidikan" class="bg-slate-800 pt-36 pb-32 dark:bg-slate-300">
     <div class="container">
 
+      <!-- Judul -->
+      <div class="mx-auto mb-16 text-center" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="mb-4 text-3xl font-bold text-white dark:text-dark sm:text-4xl lg:text-5xl">
+          Pendidikan
+        </h2>
+      </div>
+
+      <!-- Konten Pendidikan -->
+      <div class="flex flex-wrap items-center px-4 xl:w-10/12 xl:mx-auto">
+
+        <!-- Teks -->
+        <div
+          class="w-full md:w-1/2 px-4 mb-10 md:mb-0 text-white dark:text-dark"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <h3 class="text-xl font-bold mb-2">UPN Veteran Jawa Timur · 2021–2025</h3>
+          <p class="font-semibold mb-4">
+            S1 – Sistem Informasi ( Fakultas Ilmu Komputer )
+          </p>
+          <p class="leading-relaxed" style="text-align: justify;">
+            Saya menyelesaikan pendidikan sarjana di Program Studi Sistem Informasi,
+            Universitas Pembangunan Nasional “Veteran” Jawa Timur. Selama masa studi,
+            saya mempelajari berbagai konsep penting di bidang teknologi informasi,
+            meliputi analisis sistem, pengembangan perangkat lunak, basis data,
+            pemrograman web dan mobile, serta manajemen proyek TI.
+            Pengalaman akademik tersebut memperkuat kemampuan saya dalam merancang
+            solusi digital yang efektif dan berorientasi pada kebutuhan pengguna.
+            Selain itu, saya aktif mengikuti berbagai pelatihan dan proyek perkuliahan
+            untuk memperdalam keterampilan teknis serta mengembangkan pola pikir
+            analitis dan problem solving.
+          </p>
+        </div>
+
+        <!-- Foto kecil dengan hover movement -->
+        <div
+          class="w-full md:w-1/2 px-4 flex justify-center"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <div
+            class="overflow-hidden rounded-md shadow-lg 
+            transition-transform duration-300 hover:-translate-y-2"
+          >
+            <div
+                class="rounded-md shadow-lg transition-transform duration-300 hover:-translate-y-2"
+              >
+                <img
+                  src="dist/images/aicusa-7.jpg"
+                  alt="Foto Wisuda"
+                  class="object-cover rounded-md transition duration-700 hover:scale-105"
+                  style="width: 300px; height: auto;"
+                />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projek Section -->
+  <section id="projek" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
+    <div class="container">
       <div class="w-full px-4">
         <div class="mx-auto mb-16 max-w-xl text-center">
           <h2 class="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl" style="color:#BC8F8F;">
-            Portofolio
+            Projek
           </h2>
         </div>
       </div>
 
       <div class="flex flex-wrap justify-center px-4 xl:w-10/12 xl:mx-auto">
-
         <!-- ITEM 1 -->
         <div data-aos="zoom-in" data-aos-delay="100" class="mb-12 p-4 md:w-1/2">
           <div class="overflow-hidden rounded-md shadow-md h-60">
             <img src="dist/images/portfolio/2.png"
+                onclick="window.open('https:www.canva.com/design/DAG6gX0KCho/0RlrdhAz4ICifDvI4NnqLg/view?utm_content=DAG6gX0KCho&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8453336f85/', '_blank')"
                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
           </div>
           <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Website Healty.Me</h3>
@@ -355,7 +443,6 @@
     </div>
   </section>
 
-
   <footer class="mt-20 bg-[#F6F1F1] dark:bg-slate-900 py-8 border-t border-slate-200 dark:border-slate-700">
     <div class="container mx-auto text-center">
 
@@ -387,9 +474,13 @@
 
   <!-- Back to top -->
   <a href="#home" id="to-top"
-     class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 rounded-full bg-primary 
-            p-4 hover:animate-pulse transition">
-    <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
+    class="fixed bottom-4 right-4 z-[9999]
+            hidden h-14 w-14 rounded-full
+            flex items-center justify-center
+            shadow-lg hover:scale-110
+            hover:animate-pulse transition-all duration-300"
+    style="background-color:#BC8F8F;">
+    <span class="block h-4 w-4 rotate-45 border-t-2 border-l-2 border-white"></span>
   </a>
 
   <!-- AOS Library -->
@@ -403,7 +494,10 @@
       img.style.transform = `translateY(${window.scrollY * 0.1}px)`;
     });
   </script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="dist/js/script.js"></script>
 </body>
 </html>
